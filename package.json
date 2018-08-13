@@ -1,0 +1,19 @@
+{
+  "name": "jamquiz",
+  "version": "1.0.0",
+  "description": "song quiz express application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Max",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.85.0",
+    "spotify-web-api-node": "^3.0.0"
+  }
+}

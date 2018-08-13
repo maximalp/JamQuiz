@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+  <title>JamQuiz</title>
+
+  <!-- Favicon Image -->
+  <link rel="icon" href="./images/music_note.png">
+
+  <!-- Normalize CSS Reset -->
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+
+  <!-- Bulma CSS Links -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <!-- Max style sheet -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+
+<!-- HOME PAGE / PLAYLIST CHOOSE -->
+  <div class="section" id="home">
+    <div class="Container">
+        <!-- Title Header -->
+        <div class="columns is-centered is-12">
+          <div class="column has-text-centered">
+            <h1 id="jamheader">JamQuiz</h1>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered is-half">
+            <div class="box">
+            <h1 id="guesslistHeader">How To Play</h1>
+            <div class="columns has-text-centered">
+                <div class="column has-text-centered">
+                <p id="Rules">
+                This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.This is how you play jam quiz.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end columns row 1 -->
+
+      <div class="columns is-centered">
+        <div class="column has-text-centered is-half">
+          <div class="box">
+            <h1 id="guesslistHeader">Choose Quiz</h1>
+            <div class="columns has-text-centered">
+              <div class="column has-text-centered">
+                <div class="columns has-text-centered">
+                  <div class="column has-text-centered clickableItem" id="popQuiz">
+                    <p>Pop Quiz</p> 
+                  </div>
+
+                  <div class="column has-text-centered clickableItem" id="indieQuiz">
+                    <p>Indie Quiz</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end columns row 2 -->
+    </div>  <!-- end container -->
+  </div> <!-- end section -->
+
+<!-- GAME AREA / PAGE -->
+<div class="section" id="game" style="display:none">
+  <div class="Container">
+      <!-- Title Header -->
+      <div class="columns is-centered is-12">
+        <div class="column has-text-centered" >
+          <h1 id="jamheader">JamQuiz</h1>
+        </div>
+      </div>
+      <!-- Music Player / Play Button -->
+      <div class="columns is-centered is-12">
+        <div class="column is-12 has-text-centered" id="playStart">
+          <audio id="playAudio"></audio> <!--html audio player activated-->
+            <button id="playButton"></button>
+        </div>
+      </div>
+      <!-- Guess Form and Button -->
+      <div class="columns is-12">
+        <div class="column is-4" id="guessDiv">
+          <form action='#'>
+          <div class="field" autocomplete="off">
+              <p class="control is-normal">
+              <input class="input has-text-centered" type="text" placeholder="Enter the Song Title" id="guessInput">
+              </p>
+          </div>
+          <div class="field">
+            <p class="control has-text-centered">
+              <button class="button is-danger is-outlined" id="guessButton">
+                Guess Now!
+              </button>
+            </p>
+          </div>
+        </form>
+        </div>
+
+        <!-- spacing Div -->
+        <div class="column is-4" id="skipButton">
+          <p class="has-text-centered"> <span>Skip</span> </p>
+        </div>
+
+          <!-- div column for guesses area -->
+          <div class="column is-4 has-text-left" id="guessListDiv">
+              <h1 id="guesslistHeader">Guesses List</h1>
+              <div id="guessList">
+                <p class="guessListItems"id="guess1"></p>
+                <p class="guessListItems"id="guess2"></p>
+                <p class="guessListItems"id="guess3"></p>
+              </div>
+          </div>
+        </div> <!-- end guess row -->
+        <div class="columns is-12">
+          <div class="column is-12 has-text-centered">
+            <h1 id="guesslistHeader">Timer</h1>
+            <h1 id="timer"><h1>
+          </div>
+        </div>
+        <div class="columns is-12">
+          <div class="column is-12 has-text-centered">
+            <div id="statusMessages">
+              <h1 id="guesslistHeader">Message Area</h1>
+              <div id="statusMessage"></div>
+            </div>
+         </div>
+       </div>
+       <div class="columns is-12">
+         <div class="column is-12 has-text-centered">
+            <div id="scoreArea">
+              <h1 id="guesslistHeader">Score</h1>
+              <p id="scoreText"></p>
+            </div>
+            <div class="column is-12">
+            <div id="scoreArea">
+              <h1 id="guesslistHeader">Total Score</h1>
+              <p id="totalScoreText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- hints area -->
+      <div class="columns is-centered">
+        <div class="column has-text-centered is-one-quarter">
+          <h1 id="guesslistHeader">Hints</h1>
+          <div class="columns has-text-centered">
+              <div class="column has-text-centered">
+              <p id="albumHintText"></p>
+            </div>
+            <div class="column has-text-centered">
+              <p id="yearHintText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div> <!-- End Main Container -->
+<div>
+
+
+<!-- SCRIPTS ------------------------------------------>
+
+<!-- JQuery -->
+<script
+ src="https://code.jquery.com/jquery-3.3.1.js"
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous"></script>
+
+ <!-- My Javascript -->
+ <script type="text/javascript" src="./js/music.js"></script>
+
+
+<!-- -------------------------------------------------------- -->
+
+</body>
+
+</html>

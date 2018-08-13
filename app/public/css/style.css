@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#jamheader
+{
+margin-top:30px;
+font-size: 65px;
+font-family: 'Knewave', cursive;
+color: #FF8C69;
+}
+.clickableItem
+{
+  cursor: pointer;
+}
+
+#playButton {
+  background-color: transparent;
+  width: 74px;
+  height: 74px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: transparent transparent transparent #FF8C69;
+  border-width: 37px 0px 37px 64px;
+  outline:none;
+  margin-left: 25px;
+  margin-top: 1.5%;
+  margin-bottom:2%;
+  padding: 0px; /* fixing triangle proportions on all browsers */
+}
+
+#guessButton
+{
+  /* background-color: #FF8C69;  */
+   border-color: #FF8C69 #FF8C69 #FF8C69 #FF8C69;
+   color: white;
+   color: #FF8C69;
+}
+::after {
+    position: absolute;
+    transition: .3s;
+    /* content: ''; */
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+        }
+:hover {
+    cursor: pointer;
+    /* color:white;   */
+        } 
+::after {
+      background-color: #f7f7f7;
+      width: 100%;
+      left: 0;
+      }
+    
+
+
+#skipButton
+{
+  font-size: 20px;
+  font-family: 'Knewave', cursive;
+  color: #FF8C69;
+  border-color: #FF8C69;
+  border-style: dotted;
+  border-color: #FF8C69 #FF8C69 #FF8C69 #FF8C69;
+  border-width: 1px 1px 1px 1px;
+  margin-left: 0px;
+}
+
+#guessDiv
+{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* #guessListDiv
+{
+  margin-left: 40px;
+  margin-right: 40px; 
+  display: flex;
+  justify-content: center;
+}  */
+
+
+
+/*
+#playStart
+{
+position: fixed;
+}
+*/
+
+/* Styling only, the below can be changed or removed
+depending on your use case
+#xOutPlay
+{
+  position: relative;
+  display: inline-block;
+  top: -40px;
+  left: calc(100% - 52px);
+  height: 50px;
+  padding: 10px 10px;
+  z-index: 2;
+} */
+
+
+
+#guesslistHeader
+{
+font-size: 25px;
+color:#FF8C69;
+border-bottom: solid 2px #FF8C69;
+      display: inline;
+      padding-bottom: 1.5px;
+
+}
+
+
+
+#guessList
+{
+margin-top: 10px;
+}
+
+.guessListItems
+{
+margin-top: 3px;
+}
+
+
+
+/*
+.index {
+    background:url('../images/one.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Shadows Into Light', cursive;
+}
+*/
+
+div
+{
+border-width: 1px;
+border-color: orange orange orange orange;
+
+};

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>JamQuiz</title>
+
+  <!-- Favicon Image -->
+  <link rel="icon" href="./images/music_note.png">
+
+  <!-- Normalize CSS Reset -->
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+  <!-- Bulma CSS Links -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+
+  <!-- Max style sheet -->
+  <!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="./css/style1.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="mainTitle">JamQuiz</header>
+      <!-- INTRO PAGE -->
+    <div class="introPage" id="home">
+      <div class="introText">
+        <p class="bodyText">Jam Quiz is simple. Choose between two quizzes below based on the music style you want to play with. After choosing the quiz, you'll be sent to the game!</p>
+        <p class="bodyText">To really start playing JamQuiz, click the play button. You'll have 30 seconds to guess the song playing by typing the name of the song in the guess box. You'll see your guesses along the way. You can get a maximum of 300 points for one song, but you lose ten points every second you fail to guess correclty. </p>
+        <p class="bodyText">Good luck!</p>
+      </div>
+
+      <div class="formContainer">
+          <form action="" class="userForm">
+            <div class="form-row">
+              <input id="name" name="name" type="text" placeholder="Name">
+            </div>
+            <div class="form-row">
+                
+            </div>
+          </form>
+      </div>
+
+      <div class="choiceBlock">
+        <div class="quizChoice" id="popQuiz">
+          <p class="quizTitle">Pop Quiz</p>
+        </div>
+        <div class="quizChoice" id="indieQuiz">
+          <p class="quizTitle">Indie Quiz</p>
+        </div>
+      </div>
+    </div> <!-- END INTRO PAGE -->
+    
+
+      <!-- START GAME AREA -->
+      <div class="gameArea" id="game" style="display:none">
+        <div class="" id="playStart">
+          <audio id="playAudio"></audio> <!--html audio player activated-->
+            <button id="playButton"></button>
+        </div>
+        <div class="bigScoreSpot">
+          <p>Hey, Max! You're score is great!</p>
+        </div>
+
+
+      </div> <!-- END GAME AREA -->
+
+    </div>
+
+  <!-- SCRIPTS -->
+
+  <!-- JQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <!-- My Javascript -->
+  <script type="text/javascript" src="./js/music.js"></script>
+
+</body>
+
+</html>
