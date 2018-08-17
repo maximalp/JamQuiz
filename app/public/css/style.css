@@ -31,13 +31,14 @@ body {
 }
 
 .page {
-    width: 95%;
-    height: 98.5%;
+    width: 100%;
     /* border: 2px dotted #FDD564; */
     display: flex;
     flex-direction: column;
     justify-content: start;
     overflow: hidden;
+    flex-basis: 100%;
+    margin-bottom: 0.3em;
 }
 
 
@@ -48,11 +49,7 @@ body {
     text-align: center;
     font-size: 7em;
     font-family: 'Knewave', cursive;
-    margin-top: -0.25em;
-    /* font-family: 'Kalam', cursive;
-    font-weight: 700; */
-    /* font-family: 'Permanent Marker', cursive; */
-    /* color: #FDD564; */
+    /* margin-top: 0.25em; */
     -webkit-text-stroke: 3px #352f4b;
     -webkit-text-fill-color: #FBF59B;
     -webkit-paint-order: stroke fill;
@@ -262,14 +259,18 @@ body {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    border: 1px solid palegreen;
-    height: 100%;
+    /* border: 1px solid palegreen; */
+    flex-basis: 100%;
     overflow-y: auto;
 }
 
 .mainTitle.game {
+    /* height: 4.7em; */
     font-size: 4.6em;
     margin: 0;
+    /* display: flex;
+    align-self:center; */
+    
 }
 
 .musicButtonsArea {
@@ -278,8 +279,9 @@ body {
     /* border: 1px solid gray; */
     justify-content: center;
     align-items: center;
+    /* height: 8.5em; */
     margin-left: 7em;
-    flex: none;
+    flex: 1 0 auto;
     /* padding-top: 0.4em; */
     /* overflow: auto; */
 }
@@ -343,12 +345,14 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: flex start;
-    padding-top: 0.3em;
-    /* width: 100%;
-    height: 80%; */
+    align-items: flex-start;
+    height: 80%;
+    /* padding-top: 0.3em; */
+    /* flex-basis: 100%; */
     margin-top: 0.5em;
     overflow-y: auto;
+    align-content: flex-start;
+    /* border: 1px solid pink; */
 }
 
 .gamePartBox {
@@ -356,16 +360,27 @@ body {
     height: 15em;
     display: flex;
     flex-flow: column;
+    flex: 1 0 auto;
     background-color: #352f4b;
-    border: 0.3em solid #332d49;
+    border: 0.4em solid #332d49;
     border-radius: 0.2em;
-    padding: 2em;
+    padding: 0.5em 2em 2em 2em;
     margin: 0.3em 0.3em;
     -moz-box-shadow: 0 0 8px #1f1c2bcc;
     -webkit-box-shadow: 0 0 8px #1f1c2bcc;
     box-shadow: 0 0 8px #1f1c2bcc;
     overflow: auto;
 }
+
+.gamePartBox h2 {
+    
+}
+
+
+
+
+
+
 
 /* .playButtonInactive {
     background: 
@@ -383,14 +398,10 @@ body {
             rgba(0,0,0,0) 100%);
      position: relative;
     } */
-    
-
-
 
 /* alternative weird x made by me */
 /* -webkit-clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98% 100%, 58% 51%, 98% 0, 86% 0, 51% 49%);
 clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98% 100%, 58% 51%, 98% 0, 86% 0, 51% 49%); */
-
 
 /* original playbutton */
 /* #playButton {
@@ -408,10 +419,6 @@ clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98
     padding: 0px; /* fixing triangle proportions on all browsers */
     /* border: 1px dotted #FDD564; */
 
-
-  /* #playStart {
-      border: 1px solid #FBF59B;
-  } */
 
 /* —————————————————— END GAME PAGE  —————————————————— */
 
@@ -441,7 +448,7 @@ clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98
     }
     .gamePartBox {
         width: 30%;
-        height: 15em;
+        height: 17em;
         display: flex;
     }
 }
