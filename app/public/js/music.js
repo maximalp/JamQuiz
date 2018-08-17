@@ -52,7 +52,7 @@ const playMusic = () => {
     });
 
     $("#playButton").prop("disabled", true);
-    $("#playButton").css({"border-color": "transparent transparent transparent #e6e6e6"});
+    $("#playButton").css({"background-color":"#e6e6e6","cursor":"default"});
 
     time = maxtime;
 
@@ -86,7 +86,7 @@ const stopMusic = () => {
 
   // activates play button again, returns color to normal
     $("#playButton").prop("disabled", false);
-    $("#playButton").css({"border-color":"transparent transparent transparent #FF8C69"});
+    $("#playButton").css({"background-color":"#FBF59B", "cursor":"pointer"});
 
 };
 
@@ -111,6 +111,15 @@ const countDown = () => {
 // Page must be loaded before top level functions will occur. On click won't go unless DOM/document of page is ready.
 
 $(document).ready(function() {
+  
+  // player name show
+  $("#nameButton").on("click", function(event) {
+    
+    const playerName1 = $("#playerName").val();
+    console.log(playerName1);
+    $("#player").text(playerName1);
+    
+  });
 
   $("#game").hide();
   //choose pop quiz button
@@ -133,6 +142,7 @@ $(document).ready(function() {
   $("#scoreText").text(score);
   $("#totalScoreText").text(totalScore);
 
+ 
   $("#playButton").on("click", function(event) {
     $("#statusMessage").text("");
     playMusic();
@@ -181,7 +191,9 @@ $(document).ready(function() {
       //alert("Keep guessing");
     }
 
-    //switch case or if for total score
+    // let playerName1 = $("#playerName").val();
+    // $("#player").text(playerName1);
+    //switch case or if statements for total score
 
     let guess2 = $("#guess1").text();
     let guess3 = $("#guess2").text();

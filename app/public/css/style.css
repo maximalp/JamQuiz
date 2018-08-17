@@ -20,24 +20,29 @@ body {
         url(../images/background2.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
+    font-family: 'Raleway', sans-serif;
+    color: #f5f5f5;
     line-height: 1.5;
     letter-spacing: .045em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden; */
 }
 
 .page {
     width: 95%;
-    height: 98%;
+    height: 98.5%;
     /* border: 2px dotted #FDD564; */
     display: flex;
     flex-direction: column;
     justify-content: start;
     overflow: hidden;
 }
+
+
+
+/* —————————————————— INTRO PAGE  —————————————————— */
 
 .mainTitle {
     text-align: center;
@@ -53,9 +58,7 @@ body {
     -webkit-paint-order: stroke fill;
 }
 
-/* INTRODUCTORY PAGE AND GENERAL STYLE */
-
-.introPage {
+.introArea {
     /* background-color: #3D3659; */
     min-height: 0;
     height: 100%;
@@ -84,7 +87,7 @@ body {
 }
 
 .introBodyText{
-    font-family: 'Raleway', sans-serif;
+    
     /* font-family: 'Nunito', sans-serif;; */
     /* font-family: 'Source Sans Pro', sans-serif; */
     /* font-family: 'Open Sans', sans-serif; */
@@ -96,7 +99,7 @@ body {
     padding: 0em 3em;
 }
 
-    /* —————————————————— INTRO PAGE FORM —————————————————— */
+    /* INTRO PAGE FORM */
 
 .formContainer {
     display: flex;
@@ -191,7 +194,7 @@ body {
   .form-row button:focus {
     outline: none !important;
   }
-/* END FORM */
+/* END INTRO PAGE FORM */
 
 .choiceBlock {
     display: flex;
@@ -243,27 +246,160 @@ body {
     color:#f5f5f5;
 }
 
-
-
 /* END INTRODUCTORY PAGE / PAGE IS HIDDEN */
+
+
+/* —————————————————— GAME PAGE  —————————————————— */
+
+.gameNavHeader
+
+#player {
+    color: #FBF59B;
+    font-size: 2em;
+    }
 
 .gameArea {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-content: flex-start;
+    border: 1px solid palegreen;
+    height: 100%;
+    overflow-y: auto;
 }
 
+.mainTitle.game {
+    font-size: 4.6em;
+    margin: 0;
+}
 
-
+.musicButtonsArea {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid gray; */
+    justify-content: center;
+    align-items: center;
+    margin-left: 7em;
+    flex: none;
+    /* padding-top: 0.4em; */
+    /* overflow: auto; */
+}
 
 #playButton {
+    width: 8.5em;
+    height: 8.5em;
+    background-color: #FBF59B;
+    -webkit-clip-path: polygon(85% 50%, 0 0, 0 100%);
+    clip-path: polygon(85% 50%, 0 0, 0 100%);
+    border: none;
+    cursor: pointer;
+    margin-right: 1em;
+    position: relative;
+}
+
+/* edit in a div to go over play button as an X */
+/* #playButton:after {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;;
+    content: "\274c"; 
+    font-size: 60px; 
+    color: #352f4b;
+    line-height: 100px;
+    text-align: left;   
+    overflow: visible;
+} */
+
+.skipButtonContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: flex-start;
+    position: relative;
+}
+
+#skipButton {
+    width: 3.5em;
+    height: 3.5em;
+    -webkit-clip-path: polygon(85% 50%, 0 0, 0 100%);
+    clip-path: polygon(85% 50%, 0 0, 0 100%);
+    background-color: #FBF59B;
+    cursor: pointer;
+    position: absolute;
+}
+
+#skipButtonSide {
+    display: flex;
+    background-color:#FBF59B;
+    height: 2.9em;
+    width: 0.714em;;
+    position: relative;
+    left: 2.75em; 
+   
+} 
+
+.gameParts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex start;
+    padding-top: 0.3em;
+    /* width: 100%;
+    height: 80%; */
+    margin-top: 0.5em;
+    overflow-y: auto;
+}
+
+.gamePartBox {
+    width: 45%;
+    height: 15em;
+    display: flex;
+    flex-flow: column;
+    background-color: #352f4b;
+    border: 0.3em solid #332d49;
+    border-radius: 0.2em;
+    padding: 2em;
+    margin: 0.3em 0.3em;
+    -moz-box-shadow: 0 0 8px #1f1c2bcc;
+    -webkit-box-shadow: 0 0 8px #1f1c2bcc;
+    box-shadow: 0 0 8px #1f1c2bcc;
+    overflow: auto;
+}
+
+/* .playButtonInactive {
+    background: 
+        linear-gradient(to top left,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) calc(50% - 0.8px),
+            rgba(31, 28, 43, 1) 50%,
+            rgba(0,0,0,0) calc(50% + 0.8px),
+            rgba(0,0,0,0) 100%),
+        linear-gradient(to top right,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) calc(50% - 0.8px),
+            rgba(31, 28, 43, 1) 50%,
+            rgba(0,0,0,0) calc(50% + 0.8px),
+            rgba(0,0,0,0) 100%);
+     position: relative;
+    } */
+    
+
+
+
+/* alternative weird x made by me */
+/* -webkit-clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98% 100%, 58% 51%, 98% 0, 86% 0, 51% 49%);
+clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98% 100%, 58% 51%, 98% 0, 86% 0, 51% 49%); */
+
+
+/* original playbutton */
+/* #playButton {
     background-color: transparent;
     width: 74px;
     height: 74px;
     box-sizing: border-box;
     border-style: solid;
-    border-color: transparent transparent transparent #FDD564;
+    border-color: transparent transparent transparent #FBF59B;
     border-width: 37px 0px 37px 64px;
     outline:none;
     margin-left: 25px;
@@ -271,14 +407,17 @@ body {
     margin-bottom:2%;
     padding: 0px; /* fixing triangle proportions on all browsers */
     /* border: 1px dotted #FDD564; */
-  }
-
-  #playStart {
-      border: 1px dotted #FDD564;
-  }
 
 
-/* MEDIA QUERIES */
+  /* #playStart {
+      border: 1px solid #FBF59B;
+  } */
+
+/* —————————————————— END GAME PAGE  —————————————————— */
+
+
+  
+/* —————————————————— MEDIA QUERIES —————————————————— */
 
 /* Desktop Styles */
 
@@ -299,6 +438,11 @@ body {
     .page {
       width: 970px;
       height: 91%;
+    }
+    .gamePartBox {
+        width: 30%;
+        height: 15em;
+        display: flex;
     }
 }
     

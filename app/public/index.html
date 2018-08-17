@@ -36,27 +36,24 @@
 
 <body>
   <div class="page">
-    <!-- <header class="mainTitle">JamQuiz</header> -->
-      <!-- INTRO PAGE -->
-    <div class="introPage" id="home">
+    <!-- INTRO PAGE -->
+    <div class="introArea" id="home">
       <header class="mainTitle">JamQuiz</header>
       <div class="introTextArea">
         <p class="introBodyText">JamQuiz is simple. Click on a quiz below and the challenge will appear.</p>
         <p class="introBodyText">Press the play button. You have 30 seconds to guess the song playing by typing the name of the song in the guess box. You'll see your guesses along the way. You can earn a maximum of 300 points for each song, but you lose ten points for every second you fail to guess correctly. Skip forward if anxious. </p>
         <p class="introBodyText">Good luck!</p>
       </div>
-
       <div class="formContainer">
-          <form action="" class="userForm" autocomplete="off">
+          <form action="#" class="userForm" autocomplete="off">
             <div class="form-row">
-              <input id="name" name="name" type="text" placeholder="Name" required>
+              <input id="playerName" type="text" placeholder="Name" required>
             </div>
             <div class="form-row">
-               <button>Submit</button> 
+               <button id="nameButton">Submit</button> 
             </div>
           </form>
       </div>
-
       <div class="choiceBlock">
         <div class="quizChoice" id="popQuiz">
           <p class="quizTitle">Pop Quiz</p>
@@ -65,21 +62,34 @@
           <p class="quizTitle">Indie Quiz</p>
         </div>
       </div>
-    </div> <!-- END INTRO PAGE -->
-    
-
-      <!-- START GAME AREA -->
+    </div> 
+    <!-- END INTRO PAGE -->
+    <!-- START GAME PAGE/AREA -->
     <div class="gameArea" id="game" style="display:none">
-      <div class="" id="playStart">
-        <audio id="playAudio"></audio> <!--html audio player activated-->
-          <button id="playButton"></button>
+      <header class="mainTitle game">JamQuiz</header>
+      <div class="musicButtonsArea">
+        <div class="" id="playStart">
+          <audio id="playAudio"></audio> <!--html audio player activated-->
+            <button id="playButton"></button>
+        </div>
+        <div class="skipButtonContainer">
+          <div class="" id="skipButton"></div>
+          <div class="" id="skipButtonSide"></div>
+        </div>
       </div>
-      <div class="bigScoreSpot">
-        <p>Hey, Max! You're score is great!</p>
-    </div>
+      <!-- <div>
+        <p class="bigScoreArea">Hey, <span id=player></span> you're score is great!</p>
+      </div> -->
+      <div class="gameParts">
+        <div class="gamePartBox">hi</div>
+        <div class="gamePartBox">hi</div>
+        <div class="gamePartBox">hi</div>
+        <div class="gamePartBox">hi</div>
+        <div class="gamePartBox">hi</div>
+        <div class="gamePartBox">hi</div>
+      </div>
 
-
-    </div> <!-- END GAME AREA -->
+    </div> <!-- END GAME PAGE/AREAAREA -->
 
   </div> <!-- Page Container-->
 
