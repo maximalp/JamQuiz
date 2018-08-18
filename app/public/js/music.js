@@ -55,16 +55,20 @@ const playMusic = () => {
     $("#playButton").css({"background-color":"#e6e6e6","cursor":"default"});
 
     time = maxtime;
-
-    //displays time in html
+    
     $("#timer").text(time);
+    $("#timer").css({"color":"#f5f5f5"});
     timerID = setInterval(countDown, 1000);
 
     // Add hints per song
-    $("#albumHintText").html('Album:<br>' + currentSong.albumName);
-    $("#yearHintText").html('Year:<br>' + currentSong.year.substring(0,4));
+    // used to have <br> after album and year
+    $("#albumHintText").html("\n" + currentSong.albumName);
+    $("#yearHintText").html("\n" + currentSong.year.substring(0,4));
     console.log("album " + currentSong.albumName);
-};
+
+    // $("#yearHintText").html('Year: ' + currentSong.year.substring(0,4));
+    // console.log("album " + currentSong.albumName);
+  };
 
 // function to aggregate operations to be done when a song stops playing
 const stopMusic = () => {
@@ -100,9 +104,21 @@ const countDown = () => {
   $("#timer").text(time);
   // $("#timer").css({"color":"#FF8C69"});
 
+  if (time >= 6)
+    {
+      // $("#timer").text(time)
+      $("#timer").css({"color":"#f5f5f5"});
+    }
+  else 
+    {
+      // ("#timer").text(time)
+      $("#timer").css({"color":"#eb7d80"});
+    };
+
   if (time === 0) {
     stopMusic();
     $("#statusMessage").text("Time's Up! Guess again!");
+    // $("#timer").css({"color":"#f5f5f5"});
   }
 };
 
@@ -115,10 +131,19 @@ $(document).ready(function() {
   // player name show
   $("#nameButton").on("click", function(event) {
     
+    // access and display player name
     const playerName1 = $("#playerName").val();
     console.log(playerName1);
     $("#player").text(playerName1);
+    $("#playerName").val("");
     
+  });
+
+  $('#guessButton').keypress(function (e) {
+    if (e.which == 13) {
+      $('#guessInput').submit();
+      e.preventDefault();  //<---- Add this line
+    }
   });
 
   $("#game").hide();
@@ -138,7 +163,11 @@ $(document).ready(function() {
 
   //Placing initial values in display areas
   $("#timer").text(time);
-  $("#timer").css({"color":"#FF8C69"});
+    if (time <= 5)
+      {
+        $("#timer").css({"color":"#FF8C69"});
+      };
+  // $("#timer").css({"color":"#FF8C69"});
   $("#scoreText").text(score);
   $("#totalScoreText").text(totalScore);
 
@@ -146,6 +175,8 @@ $(document).ready(function() {
   $("#playButton").on("click", function(event) {
     $("#statusMessage").text("");
     playMusic();
+
+    
       // attemps at adding an x over play button via DIV
       // $("#playStart").append(`<div id="xOutPlay">
       //    <span id="x">X</span></div>`)
@@ -162,6 +193,7 @@ $(document).ready(function() {
 
   });
 
+ 
   // actions when guess button is clicked
   $("#guessButton").on("click", function(event) {
 
@@ -191,9 +223,6 @@ $(document).ready(function() {
       //alert("Keep guessing");
     }
 
-    // let playerName1 = $("#playerName").val();
-    // $("#player").text(playerName1);
-    //switch case or if statements for total score
 
     let guess2 = $("#guess1").text();
     let guess3 = $("#guess2").text();

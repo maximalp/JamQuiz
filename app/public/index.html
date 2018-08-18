@@ -17,17 +17,11 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
+ 
 
-  <!-- Bulma CSS Links -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
 
   <!-- Max style sheet -->
   <!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
@@ -41,29 +35,20 @@
       <header class="mainTitle">JamQuiz</header>
       <div class="introTextArea">
         <p class="introBodyText">JamQuiz is simple. Click on a quiz below and the challenge will appear.</p>
-        <p class="introBodyText">Press the play button. You have 30 seconds to guess the song playing by typing the name of the song in the guess box. You'll see your guesses along the way. You can earn a maximum of 300 points for each song, but you lose ten points for every second you fail to guess correctly. Skip forward if anxious. </p>
+        <p class="introBodyText">Press the play button. You have 30 seconds to guess the song playing by typing the name of the song in the guess box. You'll see your guesses along the way. You can earn a maximum of 300 points for each song. You lose ten points for every second you fail to guess correctly. Skip forward if anxious. </p>
         <p class="introBodyText">Good luck!</p>
         <div class="formContainer">
             <form action="#" class="userForm" autocomplete="off">
               <div class="form-row">
-                <input id="playerName" type="text" placeholder="Name" required>
+                <input id="playerName" type="text" placeholder="Name">
               </div>
               <div class="form-row">
-                 <button id="nameButton">Submit</button> 
+                  <!-- <input type="submit" id="nameButton" name="action" value="Submit"> -->
+                 <button type="button" id="nameButton">Submit</button>
               </div>
             </form>
         </div>
       </div>
-      <!-- <div class="formContainer">
-          <form action="#" class="userForm" autocomplete="off">
-            <div class="form-row">
-              <input id="playerName" type="text" placeholder="Name" required>
-            </div>
-            <div class="form-row">
-               <button id="nameButton">Submit</button> 
-            </div>
-          </form>
-      </div> -->
       <div class="choiceBlock">
         <div class="quizChoice" id="popQuiz">
           <p class="quizTitle">Pop Quiz</p>
@@ -87,18 +72,62 @@
           <div class="" id="skipButtonSide"></div>
         </div>
       </div>
+      
+      <div class="gameParts">
+        <div class="gamePartBox">
+          <h2>Guesswork</h2>
+          <div class="formContainer-guess">
+              <form action="#" name="guess" class="userForm" autocomplete="off">
+                <div class="form-row">
+                  <input id="guessInput" type="text" placeholder="Song Title">
+                </div>
+                <div class="form-row song">
+                   <button type="submit" id="guessButton">Guess Now</button> 
+                </div>
+              </form>
+          </div>
+        </div>
+        <div class="gamePartBox">
+          <h2>Timer</h2>
+            <div id="timer">
+             <!-- timer is dynamic -->
+            </div>
+        </div>
+        <div class="gamePartBox">
+          <h2>Hints</h2>
+          <div class="yearHintBox">
+            <div>Year</div> 
+            <div id="yearHintText">
+               <!-- text for album year generated here -->
+            </div>
+          </div> 
+          <div class="albumHintBox">
+            <div>Album</div>
+            <div id="albumHintText">
+              <!-- text for album year generated here -->
+            </div>
+          </div> 
+        </div> 
+        <div class="gamePartBox">
+          <h2>Guess List</h2> 
+          <div id="guessList">
+              <p class="guessListItems"id="guess1"></p>
+              <p class="guessListItems"id="guess2"></p>
+              <p class="guessListItems"id="guess3"></p>
+          </div>
+        </div>
+        <div class="gamePartBox">
+          <h2>Status</h2> 
+        </div>
+        <div class="gamePartBox">
+            <h2>Scores</h2>
+          </div>
+      </div>
+      
+      <!-- add name prompt features here and move div -->
       <!-- <div>
         <p class="bigScoreArea">Hey, <span id=player></span> you're score is great!</p>
       </div> -->
-      <div class="gameParts">
-        <div class="gamePartBox">hi</div>
-          <h2></h2>
-        <div class="gamePartBox">hi</div>
-        <div class="gamePartBox">hi</div>
-        <div class="gamePartBox">hi</div>
-        <div class="gamePartBox">hi</div>
-        <div class="gamePartBox">hi</div>
-      </div>
 
     </div> <!-- END GAME PAGE/AREAAREA -->
 

@@ -81,6 +81,7 @@ body {
     border-radius: 2px;
     -webkit-box-shadow: 0 0 8px rgb(31, 28, 43, 0.80);
     box-shadow: 4px 2px 8px rgb(31, 28, 43, 0.80);
+    min-height: 45%;
 }
 
 .introBodyText{
@@ -90,10 +91,10 @@ body {
     /* font-family: 'Open Sans', sans-serif; */
     font-size: 1.1em;  
     color: #f5f5f5;
-    margin: 0.9em 0 0.9em 0;
+    margin: 0.7em 0 0.7em 0;
     text-align: left;
     font-weight: 300;
-    padding: 0em 3em;
+    padding: 0em 2.5em;
 }
 
     /* INTRO PAGE FORM */
@@ -108,9 +109,10 @@ body {
     /* background-color: #3D3659; */
     /* margin: 0 7.9%; */
     /* height: 6.5em; */
-    margin: 2% auto 0 auto;
+    margin: -1.3em auto 0 auto;
     /* border: 1px solid #FDD564; */
     border-radius: 4px;
+    padding: 2% 5%;
 }
 
 .userForm {
@@ -127,7 +129,7 @@ body {
 
 .form-row {
     display: flex;
-    margin: auto;
+    margin-top: 1.3em;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -138,9 +140,9 @@ body {
   }
 
 .form-row button {
+    
     font-size: 1.45em;
     font-family: 'Raleway', sans-serif;
-    /* font-weight: bold; */
     border-radius: 4px;
     margin-top: 0.5em;
     padding: 0.45em 1.9em;
@@ -151,6 +153,8 @@ body {
     -webkit-box-shadow: 0 0 8px rgb(31, 28, 43, 0.80);
     box-shadow: 0 0 8px rgb(31, 28, 43, 0.80);
 }
+
+
 
 .form-row input[type='text'] {
   background-color: #e9edf1;
@@ -200,7 +204,7 @@ body {
     align-items: center;
     overflow: hidden;
     flex-basis: 100%;
-    margin: 2% 10%;
+    margin: 4.5% 10%;
     /* margin: 0 0; */
     /* border: 1px solid pink; */
     
@@ -251,6 +255,8 @@ body {
 .gameNavHeader
 
 #player {
+    display: block;
+    margin-top: 100px;
     color: #FBF59B;
     font-size: 2em;
     }
@@ -360,6 +366,7 @@ body {
     height: 15em;
     display: flex;
     flex-flow: column;
+    align-items: horizontal;
     flex: 1 0 auto;
     background-color: #352f4b;
     border: 0.4em solid #332d49;
@@ -369,14 +376,158 @@ body {
     -moz-box-shadow: 0 0 8px #1f1c2bcc;
     -webkit-box-shadow: 0 0 8px #1f1c2bcc;
     box-shadow: 0 0 8px #1f1c2bcc;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .gamePartBox h2 {
+    font-family: 'Kalam', cursive;
+    color: #FBF59B;
+    text-align: center;
+    font-size: 1.75em; 
+}
+
+/* Song Guess Form */
+
+.formContainer-guess {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 4px;
+    flex: none;
+}
+
+.form-row.song {
+    display: flex;
+    /* margin: auto; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1.3em;
+    /* padding-top: 1em; */
+    /* padding-bottom: 0.5em; */
+    /* background: red; */
+  }
+
+.form-row button {
+    width: 10.2em;
+    font-size: 1.4em;
+    font-family: 'Raleway', sans-serif;
+    color:#FBF59B;
+    /* border-color:#FBF59B; */
+    border: .078em solid #FBF59B;
+    font-weight:bold;
+    border-radius: 2px;
+    margin-top: 0.5em;
+    padding: 0.45em 1.9em;
+    cursor: pointer;
+    /* border: 0.05em solid #332d49; */
+    -webkit-box-shadow: 0 0 8px rgb(31, 28, 43, 0.80);
+    box-shadow: 0 0 8px rgb(31, 28, 43, 0.80);
+    -webkit-appearance: none;
     
 }
 
+.form-row input[type='text'] {
+  background-color: #e9edf1;
+  color:#3D3659;
+  /* margin-top: -2.1em; */
+  border-radius: 2px;
+  width: 100%;
+  height: 2.32em;
+  padding: 5px;
+  font-size: 1.3em;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  -webkit-box-shadow: 0 0 8px rgb(31, 28, 43, 0.80);
+    box-shadow: 0 0 8px rgb(31, 28, 43, 0.80); 
+  -webkit-appearance: none;
+  
+  
+}
+.userForm input:focus { 
+    outline: 0.2rem solid rgb(31, 28, 43, 0.60);
+    border-color: #3D3659;
+    box-shadow: 0 0 10px #3D3659;
+}
 
+.form-row::placeholder {
+    color:#3D3659;
+}
+
+.form-row button:hover {
+    background-color:#FBF59B;
+    color:#3D3659;
+    border-color: none;
+    /* -webkit-box-shadow: 0 0 8px rgb(31, 28, 43, 0.90);
+    box-shadow: 0 0 20px rgb(31, 28, 43, 0.90); */
+  }
+  
+  .form-row button:active {
+    background-color: rgb(228, 223, 152);
+    outline:none;
+  }
+
+  /* END SONG GUESS FORM */
+
+  #timer {
+      margin: auto;
+      font-family: 'Kalam', cursive;
+      color:#eb7d80;
+      color: #f5f5f5;
+      text-align: center;
+      font-size: 8.5em;  
+  }
+
+
+  /* Hint Area Box */
+  .yearHintBox, .albumHintBox {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    min-height: 29%;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-style: italic;
+    /* padding-bottom: 0.35em; */
+  }
+
+.albumHintBox {
+/* border: 1px solid pink; */
+    padding-top: 0.5em;
+    max-height: 7em;
+    margin-top: 0.1em;
+}
+.yearHintBox {
+    /* border: 1px solid pink; */
+    padding-top: 0.5em;
+    min-height: 3em;
+    max-height: 3em;
+    }
+
+#yearHintText, #albumHintText
+{
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.2;
+    min-height: 1.5em;
+    margin-top: 0.2em;
+    /* border: 1px solid red; */
+    /* font-size: 1.1em; */
+}
+
+#albumHintText
+{
+    min-height: 3em;
+}
+/* end hint area box */
+  
 
 
 
@@ -451,6 +602,19 @@ clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98
         height: 17em;
         display: flex;
     }
+    .yearHintBox, .albumHintBox {
+        font-size: 1.4em;
+        font: 400;
+        font-style: italic;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+      .yearHintText, .albumHintText {
+          margin-top: 10em;
+      }
+      .formContainer{ 
+          margin: -2.1em auto 0 auto;
+     }
 }
     
 @media only screen and (min-width: 970px) and (min-height:900px) {
