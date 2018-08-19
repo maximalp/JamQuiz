@@ -16,6 +16,9 @@ let totalScore = 0;
 
 let songs = [];
 
+let playerName1;
+  
+
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -94,6 +97,26 @@ const stopMusic = () => {
 
 };
 
+// functions for game sounds
+const winSound = () => {
+  $("#playAudio").attr({  
+    'src': "./audio/win-sound.mp3",
+    'volume': 0.5,
+    'autoplay': 'autoplay',
+    'class': 'playingMusic'
+    });
+}
+
+const errorSound = () => {
+  $("#playAudio").attr({  
+    'src': "./audio/error-sound.mp3",
+    'volume': 0.5,
+    'autoplay': 'autoplay',
+    'class': 'playingMusic'
+    });
+}
+
+
 // function for managing timer countdown and effects
 const countDown = () => {
 
@@ -117,40 +140,89 @@ const countDown = () => {
 
   if (time === 0) {
     stopMusic();
-    $("#statusMessage").text("Time's Up! Guess again!");
+    errorSound();
+    $("#statusMessage").text("Time's up. Guess again!");
     // $("#timer").css({"color":"#f5f5f5"});
   }
 };
 
-const upperCaseSong = (string) =>
-{ 
+const upperCaseSong = (string) => { 
      return string.toString().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + 
      txt.substr(1).toLowerCase();});
 };
+
+const backButton = () => {
+  $(".backArrow").on("click", function(event) {
+   location.reload(); 
+  });
+};
+
+const disableQuizButtons = () => {
+    $(".choiceBlock").css({
+      "pointer-events":"none"
+      });
+  };
+
+const enableQuizButtons = () => {
+  $(".choiceBlock").css({
+    "pointer-events":"auto"
+    });
+}
 
 // All JQuery calls often need to be made within a document ready function.
 
 // Page must be loaded before top level functions will occur. On click won't go unless DOM/document of page is ready.
 
-$(document).ready(function() {
-  
+$(document).ready(function() 
+{
+
+  $(".choiceBlock").hide();
+  disableQuizButtons();
+
   // player name show
   $("#nameButton").on("click", function(event) {
     
     // access and display player name
-    const playerName1 = $("#playerName").val();
-    console.log(playerName1);
-    $("#player").text(playerName1);
-    $("#playerName").val("");
-    
+    let playerName1 = $("#playerName").val();
+
+    if (playerName1 === "") {
+      $("#playerName").css({
+          "border":"0.12em solid #D55C5F",
+          "color":"#D55C5F"});
+        $("#playerName").attr('value', 'Enter name');
+        // $("#nameButton").prop("disabled", true);
+        disableQuizButtons();
+      }
+      else {
+        $("#playerName").val("");
+        $("#playerName").prop("placeholder", "Choose Quiz");
+        $("#playerName").prop("disabled", true);
+        $("#playerName").css("text-align", "center");
+        // $("#nameButton").prop("disabled", false);
+        $(".choiceBlock").show();
+        enableQuizButtons();
+      }
   });
 
-  $('#guessButton').keypress(function (e) {
-    if (e.which == 13) {
-      $('#guessInput').submit();
-      e.preventDefault();  //<---- Add this line
-    }
-  });
+    $("#playerName").on("click", function(event) {
+      $("#playerName").val("");
+      $(".form-row input[type='text']").css(
+          {
+            "background-color":"#e9edf1",
+            "color":"#3D3659", 
+            "border":"none"
+          }
+        );
+      // $("#playerName").attr('value', '');
+    });
+
+
+  // $('#guessButton').keypress(function (e) {
+  //   if (e.which == 13) {
+  //     $('#guessInput').submit();
+  //     e.preventDefault();  
+  //   }
+  // });
 
   $("#game").hide();
   //choose pop quiz button
@@ -199,21 +271,38 @@ $(document).ready(function() {
 
   });
 
- 
+  $("#guessInput").on("click", function(event) {
+    $("#guessInput").val("");
+    $("#guessInput").css(
+        {
+          "background-color":"#e9edf1",
+          "color":"#3D3659", 
+          "border":"none"
+        }
+      );
+    });
+
   // actions when guess button is clicked
   $("#guessButton").on("click", function(event) {
 
     let guess = $("#guessInput").val().toLowerCase().trim();
-    if (guess === "") {
-      return;
-    }
+      if (guess === "") {
+        $("#guessInput").css({
+          "border":"0.12em solid #D55C5F",
+          "color":"#D55C5F"});
+          $("#guessInput").attr('value', 'Enter name');
+          // $("#guessInput").val("");
+        return;
+      }
+
+   
     console.log("This is guess input from form: " + guess);
     currentSong = songs[songIndex];
 
     if (guess === currentSong.songTitle.toLowerCase()) {
       stopMusic();
+      winSound();
       $("#statusMessage").text("You guessed the right song!");
-      //alert("You guessed the right song!");
 
       //Tracking score
 
@@ -239,8 +328,17 @@ $(document).ready(function() {
 
     //clear form
     $("#guessInput").val("");
-  });
-}); //end document ready
+
+    // let playerName = $("#playerName").val();
+    $("#player").text($("#playerName").val());
+    
+  
+
+  }); // end guess button
+
+  backButton(); // back arrow refreshes page to restart game
+
+}); // END DOCUMENT READY
 
 
 

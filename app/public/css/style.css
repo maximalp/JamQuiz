@@ -8,7 +8,6 @@ html {
 font-size: 62.5%;
 height: 100%;
 width: 100%;
-
 }
 
 body {
@@ -36,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    overflow: hidden;
+    /* overflow: hidden; */
     flex-basis: 100%;
     margin-bottom: 0.3em;
 }
@@ -254,17 +253,6 @@ body {
 
 /* —————————————————— GAME PAGE  —————————————————— */
 
-.mainTitle.game {
-    /* height: 4.7em; */
-    font-size: 4.6em;
-    margin: 0;
-    /* display: flex;
-    align-self:center; */
-    
-}
-
-
-
 
 
 /* text-align: center;
@@ -286,77 +274,74 @@ font-family: 'Knewave', cursive;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    /* border: 1px solid palegreen; */
+    /* border: 1px solid papayawhip; */
     flex-basis: 100%;
     overflow-y: auto;
 }
 
 .gameNavHeader {
     display: flex;
-    flex-direction: row nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    align-self: center;
+    align-items: center;
+    margin: auto;
     /* border: 1px solid palegreen; */
-    width: 100%;
-    height: 50px;
+    width: 99%;
+    height: 3.4em;
+    
     background-color:#352f4b;
     font-family: 'Knewave', cursive;
-    flex: auto;
+    flex: none;
+    /* background-color: transparent; */
+    /* overflow: visible; */
+
    
     border: 0 0.4em 0.4em 0.4em solid #332d49;
-    border-radius: 3px;
-    padding: 0.1em;
-    margin: 0 1.4em 0 0.7em;
+    border-radius: 0.1em;
     -moz-box-shadow: 0 0 8px #1f1c2bcc;
     -webkit-box-shadow: 0 0 8px #1f1c2bcc;
     box-shadow: 0 0 8px #1f1c2bcc;
-    /* border-bottom: 0.04em solid #FBF59B; */
-    /* border: 1px solid pink; */
-    position: relative;
-    z-index: 1;
 }
+
 .arrowContainer {
     display: flex;
-    flex-flow: row nowrap;
-    /* min-height: 100px; */
-    align-self: center;
-    justify-self: flex-end;
-    margin-right: 63em;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 3.3em;
+    height: 2em;
+    /* border: 1px solid powderblue; */
+    margin-left: 2em;
+   
 }
+
 .backArrow {
-    /* color: #FBF59B; */
-    /* font-size: 1.4em; */
     font-family: 'Raleway', sans-serif;
     border: solid #FBF59B;
-    border-width: 0 0.4em 0.4em 0;
-    display: flex;
-    padding: 0.4em;
+    border-width: 0 0.3em 0.3em 0;
+    padding: 0.5em;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-    /* margin-top: 100px; */
   }
 
-.mainTitle2 {
+ .backArrow:hover{
+     cursor: pointer;
+     border-color: #f5f5f5;
+ } 
+
+.gameTitle {
+    align-self: center;
     /* border: 1px yellowgreen solid; */
-    /* align-self: center; */
     height: 50px;
-    margin-bottom: 50px;
-    font-size: 2.5em;
+    font-size: 2.4em;
     color: #FBF59B;
-    /* top: -4em; */
-    top: auto;
-    right: auto;
-    left: auto;
-    bottom: auto;
-    z-index: 2;
-    align-self: flex-start;
-    /* border: 1px solid red; */
-    /* -webkit-text-stroke: 2px #352f4b;
+    padding-right: 1.8em;
+    padding-bottom: 0.2em;
+    margin: 0em auto 0.075em auto;
+    /* border: 1px solid red;  */
+    -webkit-text-stroke: 0.030em #352f4b;
     -webkit-text-fill-color: #FBF59B;
-    -webkit-paint-order: stroke fill; */
+    -webkit-paint-order: stroke fill; 
 }
-
-
 
 
 .musicButtonsArea {
@@ -366,7 +351,7 @@ font-family: 'Knewave', cursive;
     justify-content: center;
     align-items: center;
     /* height: 8.5em; */
-    margin: 1.7em 3em 0.8em 0em;
+    margin: 2em 3em 1em 0em;
     flex: 1 0 auto;
     /* padding-top: 0.4em; */
     /* overflow: auto; */
@@ -437,6 +422,7 @@ font-family: 'Knewave', cursive;
     /* flex-basis: 100%; */
     overflow-y: auto;
     align-content: flex-start;
+   
     /* border: 1px solid pink; */
 }
 
@@ -448,14 +434,13 @@ font-family: 'Knewave', cursive;
     align-items: center;
     flex: 1 0 auto;
     background-color: #352f4b;
-    border: 0.4em solid #332d49;
-    border-radius: 0.2em;
+    border: 0.2em solid #332d49;
+    border-radius: 0.1em;
     padding: 0.5em 2em 2em 2em;
     margin: 0.3em 0.3em;
     -moz-box-shadow: 0 0 8px #1f1c2bcc;
     -webkit-box-shadow: 0 0 8px #1f1c2bcc;
     box-shadow: 0 0 8px #1f1c2bcc;
-    /* overflow: auto; */
 }
 
 .gamePartBox h2 {
@@ -569,8 +554,8 @@ font-family: 'Knewave', cursive;
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
-    min-height: 29%;
-    font-size: 1.2em;
+    min-height: 25%;
+    font-size: 1.3em;
     font-weight: 400;
     font-style: italic;
     /* padding-bottom: 0.35em; */
@@ -579,16 +564,17 @@ font-family: 'Knewave', cursive;
 
 .albumHintBox {
 /* border: 1px solid pink; */
-    padding-top: 0.5em;
-    max-height: 7em;
+    padding-top: 0.2em;
+    max-height: 4em;
     margin-top: 0.1em;
+    overflow-y: auto;
 }
 .yearHintBox {
     /* border: 1px solid pink; */
-    padding-top: 0.5em;
+    padding-top: 0.4em;
     min-height: 3em;
     max-height: 3em;
-    margin-top: 0.1em;
+    margin-top: 0.2em;
     }
 
 #yearHintText, #albumHintText
@@ -599,16 +585,19 @@ font-family: 'Knewave', cursive;
     line-height: 1.2;
     min-height: 1.5em;
     margin-top: 0.2em;
+    /* color: #FBF59B; */
     /* border: 1px solid red; */
     /* font-size: 1.1em; */
 }
 
 #yearHintText {
     margin-top: 0.1em;
+    margin-bottom: 0.3em;
 }
 
 #albumHintText {
-    min-height: 3em;
+    margin-top: 0.2em;
+    min-height: 1.5em;
 }
 /* END HINT AREA BOX*/
   
@@ -617,7 +606,7 @@ font-family: 'Knewave', cursive;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-align: center;
     min-width: 100%;
     min-height: 90%;
@@ -635,51 +624,42 @@ font-family: 'Knewave', cursive;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
+    font-size: 1.6em;
     text-align: center;
     min-width: 100%;
-    min-height: 65%;
+    min-height: 70%;
+    padding: 0.35em 2.2em 0em 2.2em;
 }
 
+.scoreContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 65%;
+    text-align: center;
+    height: 100%;
+    align-content: flex-start;
+    /* align-content: center; */
 
+}
+    
+.scoreHeader {
+    font-size: 1.4em;
+    margin-top: 0.1em;
+    margin-bottom: 0.2em;
+}
 
+#scoreText, #totalScoreText {
+    min-height: 2em;
+    font-size: 1.5em;
+    font-family: 'Kalam', cursive;
+    color: #FBF59B;
+    margin-top: 0.1em;
+}
 
-/* .playButtonInactive {
-    background: 
-        linear-gradient(to top left,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0) calc(50% - 0.8px),
-            rgba(31, 28, 43, 1) 50%,
-            rgba(0,0,0,0) calc(50% + 0.8px),
-            rgba(0,0,0,0) 100%),
-        linear-gradient(to top right,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0) calc(50% - 0.8px),
-            rgba(31, 28, 43, 1) 50%,
-            rgba(0,0,0,0) calc(50% + 0.8px),
-            rgba(0,0,0,0) 100%);
-     position: relative;
-    } */
-
-/* alternative weird x made by me */
-/* -webkit-clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98% 100%, 58% 51%, 98% 0, 86% 0, 51% 49%);
-clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98% 100%, 58% 51%, 98% 0, 86% 0, 51% 49%); */
-
-/* original playbutton */
-/* #playButton {
-    background-color: transparent;
-    width: 74px;
-    height: 74px;
-    box-sizing: border-box;
-    border-style: solid;
-    border-color: transparent transparent transparent #FBF59B;
-    border-width: 37px 0px 37px 64px;
-    outline:none;
-    margin-left: 25px;
-    margin-top: 1.5%;
-    margin-bottom:2%;
-    padding: 0px; /* fixing triangle proportions on all browsers */
-    /* border: 1px dotted #FDD564; */
+.bigScoreArea {
+    border: 1px solid salmon;
+    margin-top: 200px;
+}
 
 
 /* —————————————————— END GAME PAGE  —————————————————— */
@@ -703,11 +683,17 @@ clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98
         font-weight: 300;
         font-style: normal;
         line-height: 1.2;
-        min-height: 1.5em;
+        min-height: 1.4em;
         margin-top: 0.2em; 
      }
      .yearHintBox {
         margin-top: 0.3em;
+    }
+    .albumHintBox {
+        overflow-y: visible;
+    }
+    #scoreText, #totalScoreText {
+        font-size: 1.7em;  
     }
 }
 @media only screen and (min-width: 970px) {

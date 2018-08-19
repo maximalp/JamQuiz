@@ -16,15 +16,11 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kalam:300,400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
  
-
-
-  <!-- Max style sheet -->
-  <!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
+ 
+  <!-- MY style sheet -->
   <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
@@ -34,7 +30,7 @@
     <div class="introArea" id="home">
       <header class="mainTitle">JamQuiz</header>
       <div class="introTextArea">
-        <p class="introBodyText">JamQuiz is simple. Click on a quiz below and the challenge will appear.</p>
+        <p class="introBodyText">JamQuiz is simple. Enter your name and then click on a quiz below. The challenge will appear.</p>
         <p class="introBodyText">Press the play button. You have 30 seconds to guess the song playing by typing the name of the song in the guess box. You'll see your guesses along the way. You can earn a maximum of 300 points for each song. You lose ten points for every second you fail to guess correctly. Skip forward if anxious. </p>
         <p class="introBodyText">Good luck!</p>
         <div class="formContainer">
@@ -49,11 +45,11 @@
             </form>
         </div>
       </div>
-      <div class="choiceBlock">
-        <div class="quizChoice" id="popQuiz" disable>
+      <div class="choiceBlock" style="display:none">
+        <div class="quizChoice" id="popQuiz">
           <p class="quizTitle">Pop Quiz</p>
         </div>
-        <div class="quizChoice" id="indieQuiz" disable>
+        <div class="quizChoice" id="indieQuiz">
           <p class="quizTitle">Indie Quiz</p>
         </div>
       </div>
@@ -63,12 +59,14 @@
     <!-- START GAME PAGE/AREA -->
     <div class="gameArea" id="game" style="display:none">
       <nav class="gameNavHeader">
-          <h1 class="mainTitle2">JamQuiz</h1>
-        <div class="arrowContainer">
+          <div class="arrowContainer">
               <i class="backArrow"></i>
-        </div>
+            </div>
+          <h1 class="gameTitle">JamQuiz</h1>
+          <!-- <div>
+            <p class="bigScoreArea">Hey, <span id=player></span> you're score is great!</p>
+          </div> -->
       </nav> 
-      <!-- <header class="mainTitle game">JamQuiz</header> -->
       <div class="musicButtonsArea">
         <div class="" id="playStart">
           <audio id="playAudio"></audio>  
@@ -80,10 +78,10 @@
           <div class="" id="skipButtonSide"></div>
         </div>
       </div>
-      
+      <!-- START GAME PARTS SECTION-->
       <div class="gameParts">
         <div class="gamePartBox">
-          <h2>Guesswork</h2>
+          <h2>Guess Spot</h2>
           <div class="formContainer-guess">
               <form action="#" name="guess" class="userForm" autocomplete="off">
                 <div class="form-row">
@@ -122,7 +120,6 @@
               <p class="guessListItems"id="guess1"></p>
               <p class="guessListItems"id="guess2"></p>
               <p class="guessListItems"id="guess3"></p>
-              <!-- HEY AM I CENTER -->
           </div>
         </div>
         <div class="gamePartBox">
@@ -130,10 +127,16 @@
           <div id="statusMessage"></div>
         </div>
         <div class="gamePartBox">
-            <h2>Scores</h2>
-
-          </div>
-      </div>
+            <h2>Score</h2>
+            <div class="scoreContainer">
+              <div class="scoreHeader">Song Points</div>
+              <div id="scoreText"></div>
+              <div class="scoreHeader">Total Points</div>
+              <div id="totalScoreText"></div>
+            </div>
+        </div>
+      </div> 
+      <!-- END GAME PARTS -->
       
       <!-- add name prompt features here and move div -->
       <!-- <div>
@@ -142,7 +145,7 @@
 
     </div> <!-- END GAME PAGE/AREAAREA -->
 
-  </div> <!-- Page Container-->
+  </div> <!-- End Page Container-->
 
   <!-- SCRIPTS -->
 
