@@ -85,7 +85,7 @@ body {
     min-height: 45%;
 }
 
-.introBodyText{
+.introBodyText {
     
     /* font-family: 'Nunito', sans-serif;; */
     /* font-family: 'Source Sans Pro', sans-serif; */
@@ -722,10 +722,16 @@ font-family: 'Knewave', cursive;
       .formContainer { 
           margin: -2.1em auto 0 auto;
      }
+     .musicButtonsArea {
+        margin: 3.2em 3em 2.2em 0em;
+     }
 }
     
-@media only screen and (min-width: 970px) and (min-height:900px) {
+@media only screen and (min-width: 970px) and (min-height:800px) {
         .mainTitle {
             font-size: 7.5em;
+        }
+        .musicButtonsArea {
+            margin: 5em 3em 4em 0em;
         }
     }
