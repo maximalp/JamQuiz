@@ -55,6 +55,8 @@ body {
     -webkit-paint-order: stroke fill;
 }
 
+
+
 .introArea {
     /* background-color: #3D3659; */
     min-height: 0;
@@ -252,7 +254,26 @@ body {
 
 /* —————————————————— GAME PAGE  —————————————————— */
 
-.gameNavHeader
+.mainTitle.game {
+    /* height: 4.7em; */
+    font-size: 4.6em;
+    margin: 0;
+    /* display: flex;
+    align-self:center; */
+    
+}
+
+
+
+
+
+/* text-align: center;
+font-size: 7em;
+font-family: 'Knewave', cursive;
+ margin-top: 0.25em; 
+-webkit-text-stroke: 3px #352f4b;
+-webkit-text-fill-color: #FBF59B;
+-webkit-paint-order: stroke fill;  */
 
 #player {
     display: block;
@@ -270,14 +291,73 @@ body {
     overflow-y: auto;
 }
 
-.mainTitle.game {
-    /* height: 4.7em; */
-    font-size: 4.6em;
-    margin: 0;
-    /* display: flex;
-    align-self:center; */
-    
+.gameNavHeader {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-self: center;
+    /* border: 1px solid palegreen; */
+    width: 100%;
+    height: 50px;
+    background-color:#352f4b;
+    font-family: 'Knewave', cursive;
+    flex: auto;
+   
+    border: 0 0.4em 0.4em 0.4em solid #332d49;
+    border-radius: 3px;
+    padding: 0.1em;
+    margin: 0 1.4em 0 0.7em;
+    -moz-box-shadow: 0 0 8px #1f1c2bcc;
+    -webkit-box-shadow: 0 0 8px #1f1c2bcc;
+    box-shadow: 0 0 8px #1f1c2bcc;
+    /* border-bottom: 0.04em solid #FBF59B; */
+    /* border: 1px solid pink; */
+    position: relative;
+    z-index: 1;
 }
+.arrowContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    /* min-height: 100px; */
+    align-self: center;
+    justify-self: flex-end;
+    margin-right: 63em;
+}
+.backArrow {
+    /* color: #FBF59B; */
+    /* font-size: 1.4em; */
+    font-family: 'Raleway', sans-serif;
+    border: solid #FBF59B;
+    border-width: 0 0.4em 0.4em 0;
+    display: flex;
+    padding: 0.4em;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    /* margin-top: 100px; */
+  }
+
+.mainTitle2 {
+    /* border: 1px yellowgreen solid; */
+    /* align-self: center; */
+    height: 50px;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: #FBF59B;
+    /* top: -4em; */
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    z-index: 2;
+    align-self: flex-start;
+    /* border: 1px solid red; */
+    /* -webkit-text-stroke: 2px #352f4b;
+    -webkit-text-fill-color: #FBF59B;
+    -webkit-paint-order: stroke fill; */
+}
+
+
+
 
 .musicButtonsArea {
     display: flex;
@@ -286,7 +366,7 @@ body {
     justify-content: center;
     align-items: center;
     /* height: 8.5em; */
-    margin-left: 7em;
+    margin: 1.7em 3em 0.8em 0em;
     flex: 1 0 auto;
     /* padding-top: 0.4em; */
     /* overflow: auto; */
@@ -355,7 +435,6 @@ body {
     height: 80%;
     /* padding-top: 0.3em; */
     /* flex-basis: 100%; */
-    margin-top: 0.5em;
     overflow-y: auto;
     align-content: flex-start;
     /* border: 1px solid pink; */
@@ -366,7 +445,7 @@ body {
     height: 15em;
     display: flex;
     flex-flow: column;
-    align-items: horizontal;
+    align-items: center;
     flex: 1 0 auto;
     background-color: #352f4b;
     border: 0.4em solid #332d49;
@@ -386,7 +465,7 @@ body {
     font-size: 1.75em; 
 }
 
-/* Song Guess Form */
+/* SONG GUESS FORM */
 
 .formContainer-guess {
     width: 90%;
@@ -496,6 +575,7 @@ body {
     font-style: italic;
     /* padding-bottom: 0.35em; */
   }
+  
 
 .albumHintBox {
 /* border: 1px solid pink; */
@@ -508,6 +588,7 @@ body {
     padding-top: 0.5em;
     min-height: 3em;
     max-height: 3em;
+    margin-top: 0.1em;
     }
 
 #yearHintText, #albumHintText
@@ -522,13 +603,43 @@ body {
     /* font-size: 1.1em; */
 }
 
-#albumHintText
-{
+#yearHintText {
+    margin-top: 0.1em;
+}
+
+#albumHintText {
     min-height: 3em;
 }
-/* end hint area box */
+/* END HINT AREA BOX*/
   
+.guessList {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.3em;
+    text-align: center;
+    min-width: 100%;
+    min-height: 90%;
+    align-content: flex-start;
+}
 
+.guessList p {
+    min-height: 1em;
+    margin-bottom: 0.3em;
+    line-height: 1.2em;
+}
+
+#statusMessage {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    text-align: center;
+    min-width: 100%;
+    min-height: 65%;
+}
 
 
 
@@ -587,8 +698,18 @@ clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98
       width: 801px;
       height: 91%;
     }
-  }
-
+    #yearHintText, #albumHintTex {
+        text-align: center;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.2;
+        min-height: 1.5em;
+        margin-top: 0.2em; 
+     }
+     .yearHintBox {
+        margin-top: 0.3em;
+    }
+}
 @media only screen and (min-width: 970px) {
     html {
         font-size: 87.5%;
@@ -610,9 +731,9 @@ clip-path: polygon(13% 0, 2% 0, 44% 51%, 0 100%, 14% 100%, 51% 54%, 86% 100%, 98
         margin-bottom: 1em;
       }
       .yearHintText, .albumHintText {
-          margin-top: 10em;
+          margin-top: 3em;
       }
-      .formContainer{ 
+      .formContainer { 
           margin: -2.1em auto 0 auto;
      }
 }

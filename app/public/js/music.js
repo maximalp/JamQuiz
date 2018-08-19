@@ -122,6 +122,12 @@ const countDown = () => {
   }
 };
 
+const upperCaseSong = (string) =>
+{ 
+     return string.toString().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + 
+     txt.substr(1).toLowerCase();});
+};
+
 // All JQuery calls often need to be made within a document ready function.
 
 // Page must be loaded before top level functions will occur. On click won't go unless DOM/document of page is ready.
@@ -227,9 +233,9 @@ $(document).ready(function() {
     let guess2 = $("#guess1").text();
     let guess3 = $("#guess2").text();
 
-    $("#guess1").text(guess);
-    $("#guess2").text(guess2);
-    $("#guess3").text(guess3);
+    $("#guess1").text(upperCaseSong(guess));
+    $("#guess2").text(upperCaseSong(guess2));
+    $("#guess3").text(upperCaseSong(guess3));
 
     //clear form
     $("#guessInput").val("");

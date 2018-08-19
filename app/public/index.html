@@ -50,21 +50,29 @@
         </div>
       </div>
       <div class="choiceBlock">
-        <div class="quizChoice" id="popQuiz">
+        <div class="quizChoice" id="popQuiz" disable>
           <p class="quizTitle">Pop Quiz</p>
         </div>
-        <div class="quizChoice" id="indieQuiz">
+        <div class="quizChoice" id="indieQuiz" disable>
           <p class="quizTitle">Indie Quiz</p>
         </div>
       </div>
     </div> 
     <!-- END INTRO PAGE -->
+
     <!-- START GAME PAGE/AREA -->
     <div class="gameArea" id="game" style="display:none">
-      <header class="mainTitle game">JamQuiz</header>
+      <nav class="gameNavHeader">
+          <h1 class="mainTitle2">JamQuiz</h1>
+        <div class="arrowContainer">
+              <i class="backArrow"></i>
+        </div>
+      </nav> 
+      <!-- <header class="mainTitle game">JamQuiz</header> -->
       <div class="musicButtonsArea">
         <div class="" id="playStart">
-          <audio id="playAudio"></audio> <!--html audio player activated-->
+          <audio id="playAudio"></audio>  
+          <!-- html audio player activated -->
             <button id="playButton"></button>
         </div>
         <div class="skipButtonContainer">
@@ -82,7 +90,7 @@
                   <input id="guessInput" type="text" placeholder="Song Title">
                 </div>
                 <div class="form-row song">
-                   <button type="submit" id="guessButton">Guess Now</button> 
+                   <button type="submit" id="guessButton">Guess</button> 
                 </div>
               </form>
           </div>
@@ -110,17 +118,20 @@
         </div> 
         <div class="gamePartBox">
           <h2>Guess List</h2> 
-          <div id="guessList">
+          <div class="guessList">
               <p class="guessListItems"id="guess1"></p>
               <p class="guessListItems"id="guess2"></p>
               <p class="guessListItems"id="guess3"></p>
+              <!-- HEY AM I CENTER -->
           </div>
         </div>
         <div class="gamePartBox">
-          <h2>Status</h2> 
+          <h2>Status</h2>
+          <div id="statusMessage"></div>
         </div>
         <div class="gamePartBox">
             <h2>Scores</h2>
+
           </div>
       </div>
       
